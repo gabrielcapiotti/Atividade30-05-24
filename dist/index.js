@@ -1,0 +1,21 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const Card_pio_1 = __importDefault(require("./model/Card\u00E1pio"));
+const Pratos_1 = __importDefault(require("./model/Pratos"));
+const Circulo_1 = __importDefault(require("./modelFormas/Circulo"));
+const Retangulo_1 = __importDefault(require("./modelFormas/Retangulo"));
+const item = new Pratos_1.default(30, "camiseta", "algodão");
+const pedido = new Card_pio_1.default();
+pedido.adicionarItem(item);
+console.log(pedido.itens);
+console.log(item);
+const circulo = new Circulo_1.default(5);
+circulo.desenhar();
+circulo.redimensionar();
+const retangulo = new Retangulo_1.default(10, 20);
+retangulo.desenhar();
+retangulo.redimensionar();
+console.log(circulo);
